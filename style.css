@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+ * {
+   box-sizing: border-box;
+}
+ html, body {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+      background-color: #EEF0F7;
+ 
+}
+ @media screen and (max-width: 768px) {
+   html, body {
+     font-size: 12px;
+  }
+
+ 
+}
+ .container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100vh;
+}
+ .button {
+   text-decoration: none;
+     text-transform: uppercase;
+   display: inline-block;
+   border-radius: 1.5rem;
+   background-color: #8BCDFF;
+   color: #fff;
+   padding: 1rem 2rem;
+
+   font-family: 'Montserrat', sans-serif ;
+   font-size: 20px;
+      font-weight: bold; 
+     border: 1px solid #D8DCEB;
+background: linear-gradient(343deg,#6588FF,#8BCDFF);
+     border-radius: 5px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+ .popup {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   bottom: 0;
+   right: 0;
+   background-color:  #EEF0F7;
+   z-index: 2;
+   visibility: hidden;
+   opacity: 0;
+   overflow: hiden;
+   transition: 0.64s ease-in-out;
+}
+ .popup-inner {
+   position: relative;
+   bottom: -100vw;
+   right: -100vh;
+   display: flex;
+   align-items: center;
+   max-width: 830px;
+   max-height: 600px;
+   width: 60%;
+   height: 80%;
+   background-color: #fff;
+box-shadow: 0 0 26px 8px #65656536;
+   transform: rotate(32deg);
+   transition: 0.64s ease-in-out;
+}
+ .popup__photo {
+     display: flex;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    padding: 1.6rem;
+        padding-left: 2rem;
+}
+ .popup__photo img {
+   width: 100%;
+   height: auto;
+}
+ .popup__text {
+  display: flex;
+    flex-direction: column;
+     width: 50%;
+    height: 100%;
+    margin-top: 1rem ;
+    padding: 2rem;
+}
+ .popup__text h1 {
+  font-family: 'Montserrat', sans-serif ;
+   font-size: 30px;
+    font-weight: 600;
+   margin-bottom: 0rem;
+    color: #1A2250;
+    font-weight: bold;
+}
+ .popup__text p {
+  font-family: 'Montserrat', sans-serif ;
+   font-size: 23px;
+     color: #1A2250;
+   line-height: 1.5;
+}
+
+ .popup__text input {
+font-family: 'Montserrat', sans-serif ;
+   font-size: 20px;
+     color: #1A2250;
+     border: 1px solid #D8DCEB;
+     border-radius: 5px;
+  height: 65px;
+ padding-left: 20px;
+ margin-bottom: 1rem;
+}
+
+
+.popup__text button {
+font-family: 'Montserrat', sans-serif ;
+   font-size: 20px;
+     color: #fff;
+     font-weight: bold; 
+     border: 1px solid #D8DCEB;
+background: linear-gradient(343deg,#6588FF,#8BCDFF);
+     border-radius: 5px;
+  height: 65px;
+ padding-left: 20px;
+ margin-bottom: 1rem;
+}
+
+ .popup__text label {
+  font-family: 'Montserrat', sans-serif ;
+   font-size: 16px;
+   text-align: center;
+     color: #a8a9ad;
+     font-weight: bold;
+   line-height: 1.5;
+}
+
+
+
+
+ .popup:target {
+   visibility: visible;
+   opacity: 1;
+}
+ .popup:target .popup-inner {
+   bottom: 0;
+   right: 0;
+   transform: rotate(0);
+}
+ .popup__close {
+      position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 1px solid #9797973b;
+    z-index: 4;
+    color: #000;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+  
+
+ @media screen and (max-width: 892px) {
+   .popup-inner{ 
+width: 90%; 
+height: auto;
+   }
+
+   .popup__photo{ 
+width: 100%; 
+height: auto;
+    }
+
+
+.popup__text{ 
+width: 100%; 
+height: auto;
+   }
+} 
+
+ @media screen and (max-width: 768px) {
+  
+  .popup-inner{ 
+width: 90%; 
+height: auto;
+   }
+
+.popup__photo{ 
+width: 100%; 
+height: auto;
+display: none;
+   }
+
+
+.popup__text{ 
+width: 100%; 
+height: auto;
+   }
+
+    .popup__text h1 {
+ 
+   font-size: 20px;
+   
+}
+ .popup__text p {
+   
+   font-size: 16px;
+   
+}
+
+ .popup__text input {
+    font-size: 15px;
+     
+}
+ 
+
+}  
